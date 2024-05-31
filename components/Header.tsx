@@ -1,12 +1,12 @@
 import { getServerSession } from "next-auth";
 import DarkModeToggle from "./DarkModeToggle";
-import Logo from "./Logo";
 import UserButton from "./UserButton";
 import { authOptions } from "@/auth";
 import Link from "next/link";
 import { MessagesSquareIcon } from "lucide-react";
 import CreateChatButton from "./CreateChatButton";
 import UpgradeBanner from "./UpgradeBanner";
+import LanguageSelect from "./LanguageSelect";
 
 const Header = async () => {
   const session = await getServerSession(authOptions);
@@ -14,9 +14,14 @@ const Header = async () => {
   return (
     <header className="sticky top-0 z-50 bg-white dark:bg-gray-900">
       <nav className="flex flex-col sm:flex-row items-center p-5 pl-2 bg-white dark:bg-gray-900 max-w-7xl mx-auto">
-        <Logo />
-
+        <Link
+          href={"/"}
+          className="dark:text-white font-bold text-2xl my-4 lg:my-2"
+        >
+          ChatWithAnyone
+        </Link>
         <div className="flex-1 flex items-center justify-end space-x-2 md:space-x-4">
+          <LanguageSelect />
           {session ? (
             <>
               <Link href={"/chat"} prefetch={false}>

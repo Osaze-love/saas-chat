@@ -6,7 +6,8 @@ import { Button } from "./ui/button";
 
 const UpgradeBanner = () => {
   const subscription = useSubscriptionStore((state) => state.subscription);
-  const isPro = subscription?.role === "pro";
+  const isPro =
+    subscription?.role === "pro" || subscription?.status === "active";
 
   const router = useRouter();
 

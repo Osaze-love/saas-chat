@@ -1,5 +1,7 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+Next auth, interface, making a converter, firebase converters, the different ways to declare attribute functions like onclick and onsubmit
+
 ## Getting Started
 
 First, run the development server:
