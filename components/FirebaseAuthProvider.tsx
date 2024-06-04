@@ -10,7 +10,6 @@ const syncFirebaseAuth = async (session: Session) => {
   if (session && session.firebaseToken) {
     try {
       await signInWithCustomToken(auth, session.firebaseToken!);
-      console.log(session.firebaseToken);
     } catch (error) {
       console.log("Error signing in with custom token", error);
     }

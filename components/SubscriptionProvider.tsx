@@ -23,11 +23,9 @@ const SubscriptionProvider = ({
       subscriptionRef(session?.user.id),
       (snapshot) => {
         if (snapshot.empty) {
-          console.log("User has no subscription");
           setSubscription(null);
           return;
         } else {
-          console.log("User has a subscription");
           setSubscription(snapshot.docs[0].data());
         }
       },

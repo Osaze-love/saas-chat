@@ -13,6 +13,7 @@ const ChatMembersBadges = ({ chatId }: { chatId: string }) => {
   );
 
   const adminId = UseAdminId({ chatId });
+
   if (loading && !members) return <LoadingSpinner />;
   return (
     !loading && (

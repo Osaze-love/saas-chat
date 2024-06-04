@@ -14,7 +14,7 @@ const UseAdminId = ({ chatId }: { chatId: string }) => {
 
       setAdminId(adminId);
     };
-    fetchAdminStatus;
+    fetchAdminStatus();
   }, [chatId]);
 
   return adminId;
